@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html>
 <head>
     <title>Portofolio Saya</title>
@@ -25,27 +25,6 @@
         color: #000000; /* Misalnya, warna hitam untuk tema terang */
     }
   }
-
-        img {
-      width: 100%;
-      height: auto;
-    }
-
-    .project-img {
-      content: url('project-light1.png'); /* Gambar default untuk tema terang */
-    }
-
-    @media (prefers-color-scheme: dark) {
-      .project-img {
-        content: url('project-dark1.png'); /* Gambar untuk tema gelap */
-      }
-    }
-
-    @media (prefers-color-scheme: light) {
-      .project-img {
-        content: url('project-light1.png'); /* Gambar untuk tema terang */
-      }
-    }
         
         h1 {
             text-align: center;
@@ -93,5 +72,62 @@
         <h2 class="title">Project 3</h2>
         <p class="description">Deskripsi proyek 3.</p>
     </div>
-</body>
-</html>
+    
+    <style>
+  body {
+    display: flex;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .footer {
+    animation: slide-in 5s forwards;
+  }
+  
+  @keyframes slide-in {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+</style>
+
+<div class="footer">
+  <i>made with love 💕</i>
+</div>
+
+    <script>
+    const darkImages = {
+      'project-img1': 'dark-image1.png',
+      'project-img2': 'dark-image2.png',
+      'project-img3': 'dark-image3.png',
+    };
+
+    const lightImages = {
+      'project-img1': 'light-image1.png',
+      'project-img2': 'light-image2.png',
+      'project-img3': 'light-image3.png',
+    };
+
+    function setImagesBasedOnTheme() {
+      const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+      const imageElements = document.getElementsByClassName('project');
+      for (const image of imageElements) {
+        const imageId = image.id;
+        if (isDarkMode) {
+          image.src = darkImages[imageId];
+        } else {
+          image.src = lightImages[imageId];
+        }
+      }
+    }
+
+    setImagesBasedOnTheme();
+  </script>
+  </body>
+    </html>
