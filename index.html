@@ -5,13 +5,24 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-image: url('background.png');
             background-repeat: no-repeat;
             background-size: cover;
             background-position: center;
             height: 100vh;
         }
 
+        @media (prefers-color-scheme: dark) {
+    body {
+      background-image: url('dark-background.png');
+    }
+  }
+
+  @media (prefers-color-scheme: light) {
+    body {
+      background-image: url('light-background.png');
+    }
+  }
+        
         h1 {
             text-align: center;
         }
