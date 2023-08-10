@@ -25,6 +25,27 @@
         color: #000000; /* Misalnya, warna hitam untuk tema terang */
     }
   }
+
+        img {
+      width: 100%;
+      height: auto;
+    }
+
+    .project-img {
+      content: url('project1.png'); /* Gambar default untuk tema terang */
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .project-img {
+        content: url('project-dark1.png'); /* Gambar untuk tema gelap */
+      }
+    }
+
+    @media (prefers-color-scheme: light) {
+      .project-img {
+        content: url('project-light1.png'); /* Gambar untuk tema terang */
+      }
+    }
         
         h1 {
             text-align: center;
