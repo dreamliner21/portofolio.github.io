@@ -12,8 +12,31 @@
     .content {
       padding: 10px;
       text-align: center;
-      color: #ffff;
+      color: #000;
     }
+    footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Ubah sesuai dengan tinggi ikon-ikon media sosial yang Anda gunakan */
+  /* background: #f9f9f9; */
+}
+
+#media-sosial {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Jarak antara ikon-ikon media sosial */
+}
+
+#media-sosial a img {
+  width: 30px;
+  height: 30px;
+}
   </style>
 </head>
 <body>
@@ -21,8 +44,28 @@
     <!-- Konten proyek 1 -->
 
     <h1>about me</h1>
-    <p>website ini dibuat untuk bersenang-senang. Website ini sepenuhnya dibuat oleh AI Chat-GPT.</p>
+    <p><b>Hai, saya Paul. Saya adalah siswa di SMA yang berada di Semarang. Saya memiliki hobi, hobi saya bermain <b>game</b>, <b>ngoding</b>, <b>olahraga</b> dan <b>rebahan</b>. <b>Saya berumur 18 tahun.</b></p>
 
   </div>
+   <!-- Tautan media sosial -->
+  <footer>
+    <div id="media-sosial">
+      <a href="https://wa.me/6285965981742">
+        <img src="whatsapp.png" alt="WhatsApp">
+      </a>
+
+      <a href="https://www.github.com/dreamliner21">
+        <img src="github.png" alt="GitHub">
+      </a>
+
+      <a href="https://www.tiktok.com/@username">
+        <img src="tiktok.png" alt="TikTok">
+      </a>
+
+      <a href="https://www.instagram.com/initiaann_0705/">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>
