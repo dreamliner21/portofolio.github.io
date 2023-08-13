@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>about me</title>
+  <style>
+    body {
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+    }
+    .content {
+      padding: 10px;
+      text-align: center;
+      color: #ffff;
+    }
+  </style>
+</head>
+<body>
+  <div class="content">
+    <!-- Konten proyek 1 -->
+
+    <h1>about me</h1>
+    <p>website ini dibuat untuk bersenang-senang. Website ini sepenuhnya dibuat oleh AI Chat-GPT.</p>
+
+  </div>
+</body>
+</html>
