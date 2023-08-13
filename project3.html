@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>mp4</title>
+  </head>
+  <body>
+    <label for="videoLink">Masukkan Tautan Video:</label>
+    <input type="text" id="videoLink" value="https://dreamliner21.github.io/mp4.github.io/">
+    <button onclick="playVideo()">Putar Video</button>
 
+    <video id="myVideo" controls autoplay muted>
+    </video>
+
+    <script>
+      function playVideo() {
+        var videoLink = document.getElementById("videoLink").value;
+        var video = document.getElementById("myVideo");
+
+        video.innerHTML = ""; // membersihkan video sebelumnya
+        var source = document.createElement("source");
+        source.setAttribute("src", videoLink);
+        source.setAttribute("type", "video/mp4");
+        video.appendChild(source);
+
+        video.load(); // memuat video baru
+        video.play(); // memainkan video
+      }
+    </script>
+  </body>
+</html>
