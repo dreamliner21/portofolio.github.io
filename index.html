@@ -77,21 +77,33 @@
         <p class="description">tekan saja</p>
     </div>
 
-    <audio autoplay muted loop>
-  <source src="sound.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
+    <!DOCTYPE html>
+<html>
+<head>
+  <title>Auto Play Sound</title>
+</head>
+<body>
+  <audio id="hidden-audio" autoplay muted loop>
+    <source src="https://k.top4top.io/m_2781057vs0.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
 
-<!-- Kontrol audio -->
-<button onclick="toggleSound()">Mute/Unmute</button>
+  <script>
+    var audio = document.getElementById("hidden-audio");
+    var duration = 1000; // 1000 milidetik = 1 detik
 
-<script>
-  var audio = document.querySelector("audio");
+    // Fungsi untuk menghentikan suara
+    function pauseSound() {
+      audio.pause();
+    }
 
-  function toggleSound() {
-    audio.muted = !audio.muted;
-  }
-</script>
+    // Panggil fungsi saat halaman dimuat
+    window.addEventListener("load", function() {
+      setTimeout(pauseSound, duration);
+    });
+  </script>
+</body>
+</html>
     
     <style>
   body {
