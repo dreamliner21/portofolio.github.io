@@ -50,9 +50,20 @@
   height: 30px;
 }
   </style>
+  <audio id="background-audio" loop autoplay src="jiwayangbersedih.mp3"></audio>
+  <script>
+        const backgroundAudio = document.getElementById("background-audio");
+
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                backgroundAudio.pause();
+            } else {
+                backgroundAudio.play();
+            }
+        });
+  </script>
 </head>
 <body>
-<audio id="background-audio" loop autoplay src="jiwayangbersedih.mp3"></audio>
   
   <div class="content">
     <!-- Konten proyek 1 -->
@@ -81,21 +92,6 @@
     <p>boleh lelah, tapi tidak boleh menyerah.</p>
 
   </div>
-  <script>
-    const backgroundAudio = document.getElementById("background-audio");
-
-    window.addEventListener("DOMContentLoaded", function() {
-        backgroundAudio.play();
-    });
-
-    document.addEventListener("visibilitychange", function() {
-        if (document.hidden) {
-            backgroundAudio.pause();
-        } else {
-            backgroundAudio.play();
-        }
-    });
-   </script>
    <!-- Tautan media sosial -->
   <footer>
     <div id="media-sosial">
