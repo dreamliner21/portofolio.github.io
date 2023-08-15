@@ -45,28 +45,38 @@
       display: inline-block;
       margin: 0 10px;
       position: relative;
-      transition: transform 0.3s ease;
+      opacity: 0; /* Mengatur opasitas menjadi 0 saat awalnya */
     }
     
     #media-sosial a img {
-      width: 24px; /* Ubah lebar ikon */
-      height: 24px; /* Ubah tinggi ikon */
+      width: 24px;
+      height: 24px;
     }
     
     #media-sosial a:hover {
       transform: scale(1.2);
     }
-    /* Animasi Gelombang */
-        @keyframes wave {
-            0% {
-                transform: translateX(-50px);
-            }
-            50% {
-                transform: translateX(50px) rotate(45deg);
-            }
-            100% {
-                transform: translateX(-50px);
-            }
+    
+    @keyframes slideIn {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+    
+    @keyframes slideOut {
+      0% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
         }
     
     .watermark {
@@ -115,6 +125,31 @@
         <img src="instagram.png" alt="Instagram">
       </a>
     </div>
+    <script>
+    var icons = document.querySelectorAll("#media-sosial a");
+    var delay = 20000; // Waktu jeda (dalam milidetik) sebelum animasi keluar dimulai.
+    var inDuration = 5000; // Durasi animasi masuk (dalam milidetik).
+    var outDuration = 5000; // Durasi animasi keluar (dalam milidetik).
+    var currentIndex = -1; // Indeks ikon media sosial yang sedang ditampilkan.
+
+    function loop() {
+      if(currentIndex !== -1) {
+        // Menjalankan animasi keluar pada ikon media sosial sebelumnya.
+        icons[currentIndex].style.animation = "slideOut " + outDuration/1000 + "s ease-in-out forwards";
+      }
+
+      // Menentukan indeks ikon media sosial selanjutnya yang akan ditampilkan.
+      currentIndex = ++currentIndex % icons.length;
+
+      // Menjalankan animasi masuk pada ikon media sosial selanjutnya.
+      icons[currentIndex].style.animation = "slideIn " + inDuration / 1000 + "s ease-in-out forwards";
+
+      setTimeout(loop, delay + inDuration + outDuration);
+    }
+
+    // Memanggil fungsi loop untuk pertama kali saat halaman dimuat.
+    setTimeout(loop, delay);
+    </script>
     <div class="watermark">©PAULZZ</div>
   </footer>
 </body>
