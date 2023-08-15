@@ -81,6 +81,21 @@
     <p>boleh lelah, tapi tidak boleh menyerah.</p>
 
   </div>
+  <script>
+    const backgroundAudio = document.getElementById("background-audio");
+
+    window.addEventListener("DOMContentLoaded", function() {
+        backgroundAudio.play();
+    });
+
+    document.addEventListener("visibilitychange", function() {
+        if (document.hidden) {
+            backgroundAudio.pause();
+        } else {
+            backgroundAudio.play();
+        }
+    });
+   </script>
    <!-- Tautan media sosial -->
   <footer>
     <div id="media-sosial">
