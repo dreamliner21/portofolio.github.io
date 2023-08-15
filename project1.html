@@ -126,29 +126,20 @@
       </a>
     </div>
     <script>
-    var icons = document.querySelectorAll("#media-sosial a");
-    var delay = 20000; // Waktu jeda (dalam milidetik) sebelum animasi keluar dimulai.
-    var inDuration = 5000; // Durasi animasi masuk (dalam milidetik).
-    var outDuration = 5000; // Durasi animasi keluar (dalam milidetik).
-    var currentIndex = -1; // Indeks ikon media sosial yang sedang ditampilkan.
+    var mediaSosial = document.getElementById("media-sosial");
+var ikons = mediaSosial.getElementsByTagName("img");
 
-    function loop() {
-      if(currentIndex !== -1) {
-        // Menjalankan animasi keluar pada ikon media sosial sebelumnya.
-        icons[currentIndex].style.animation = "slideOut " + outDuration/1000 + "s ease-in-out forwards";
-      }
+for (var i = 0; i < ikons.length; i++) {
+  ikons[i].style.animationDelay = ikons[i].getAttribute("style").match(/animation-delay: ([0-9]+s)/)[1];
+}
 
-      // Menentukan indeks ikon media sosial selanjutnya yang akan ditampilkan.
-      currentIndex = ++currentIndex % icons.length;
+window.onload = function() {
+  mediaSosial.classList.add("tampil");
 
-      // Menjalankan animasi masuk pada ikon media sosial selanjutnya.
-      icons[currentIndex].style.animation = "slideIn " + inDuration / 1000 + "s ease-in-out forwards";
-
-      setTimeout(loop, delay + inDuration + outDuration);
-    }
-
-    // Memanggil fungsi loop untuk pertama kali saat halaman dimuat.
-    setTimeout(loop, delay);
+  for (var i = 0; i < ikons.length; i++) {
+    ikons[i].classList.add("muncul");
+  }
+}
     </script>
     <div class="watermark">©PAULZZ</div>
   </footer>
