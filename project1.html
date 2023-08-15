@@ -4,6 +4,18 @@
   <title>about me</title>
   <style>
   body {
+    /* Animasi Gelombang */
+        @keyframes wave {
+            0% {
+                transform: translateX(-50px);
+            }
+            50% {
+                transform: translateX(50px) rotate(45deg);
+            }
+            100% {
+                transform: translateX(-50px);
+            }
+        }
       margin: 0;
       padding: 0;
     }
@@ -28,30 +40,21 @@
       color: #fff;
     }
     footer {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 100px;
-            /* background: #f9f9f9; */
-        }
-        
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100px; /* Ubah sesuai dengan tinggi ikon-ikon media sosial yang Anda gunakan */
+  /* background: #f9f9f9; */
+}
         #media-sosial {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-        }
-        
-        #media-sosial a {
-            position: relative;
-            display: inline-block;
-            width: 30px;
-            height: 30px;
-            overflow: hidden;
         }
         
         #media-sosial a img {
@@ -61,26 +64,6 @@
             width: 30px;
             height: 30px;
             transition: transform 0.5s ease-in-out;
-        }
-        
-        #media-sosial a:hover img {
-            transform: scale(1.2);
-        }
-        
-        @keyframes wave-animation {
-            0% {
-                transform: translateY(0);
-            }
-            50% {
-                transform: translateY(-10px);
-            }
-            100% {
-                transform: translateY(0);
-            }
-        }
-        
-        #media-sosial a:hover img {
-            animation: wave-animation 1s infinite;
         }
 
     .watermark {
