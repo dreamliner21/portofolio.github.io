@@ -109,20 +109,13 @@
       </a>
     </div>
     <script>
-    var mediaSosial = document.getElementById("media-sosial");
-var ikons = mediaSosial.getElementsByTagName("img");
+    var ikonMediaSosial = document.querySelectorAll(".animasi-masuk");
 
-for (var i = 0; i < ikons.length; i++) {
-  ikons[i].style.animationDelay = ikons[i].getAttribute("style").match(/animation-delay: ([0-9]+s)/)[1];
-}
-
-window.onload = function() {
-  mediaSosial.classList.add("tampil");
-
-  for (var i = 0; i < ikons.length; i++) {
-    ikons[i].classList.add("muncul");
-  }
-}
+    window.onload = function() {
+      ikonMediaSosial.forEach(function(ikon, index) {
+        ikon.style.animationDelay = (index + 1) * 0.5 + "s";
+      });
+    }
     </script>
     <div class="watermark">©PAULZZ</div>
   </footer>
