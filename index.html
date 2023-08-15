@@ -78,7 +78,18 @@
   height: 30px;
 }
   </style>
-    
+    <audio id="background-audio" loop autoplay src=jiwayangbersedih.mp3"></audio>
+  <script>
+        const backgroundAudio = document.getElementById("background-audio");
+
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                backgroundAudio.pause();
+            } else {
+                backgroundAudio.play();
+            }
+        });
+  </script>  
 </head>
 <body>
     
@@ -91,7 +102,7 @@
 </div>
     
     <div class="project">
-        <img src="project2.png" alt="quote of the day" onclick="window.location.href='project2.html'">
+        <img src="project2.gif" alt="quote of the day" onclick="window.location.href='project2.html'">
         <h2 class="title"><a href="project2.html">quote of the day</a></h2>
         <p class="description">cukup diikhlaskan meski menyakitkan</p>
     </div>
@@ -101,19 +112,6 @@
         <h2 class="title"><a href="https://dreamliner21.github.io/mp4.github.io/">Click Me</a></h2>
         <p class="description">tekan saja</p>
     </div>
-
-    <audio id="background-audio" loop autoplay src=jiwayangbersedih.mp3"></audio>
-  <script>
-        const backgroundAudio = document.getElementById("background-audio");
-
-        document.addEventListener("visibilitychange", function() {
-            if (document.hidden) {
-                backgroundAudio.pause();
-            } else {
-                backgroundAudio.play();
-            }
-        });
-  </script>
     
     <style>
   body {
