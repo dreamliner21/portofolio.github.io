@@ -78,9 +78,20 @@
   height: 30px;
 }
   </style>
+    <audio id="background-audio" loop autoplay src="sound.mp3"></audio>
+  <script>
+        const backgroundAudio = document.getElementById("background-audio");
+
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                backgroundAudio.pause();
+            } else {
+                backgroundAudio.play();
+            }
+        });
+  </script>
 </head>
 <body>
-    <audio autoplay="autoplay" hidden="hidden" src="https://dreamliner21.github.io/sound.mp3/"></audio>
     
     <h1>Portofolio Saya</h1>
     
