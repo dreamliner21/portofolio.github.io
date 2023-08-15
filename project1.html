@@ -38,32 +38,31 @@
       padding: 10px;
       text-align: center;
       color: #fff;
-    }
+   }
     footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100px; /* Ubah sesuai dengan tinggi ikon-ikon media sosial yang Anda gunakan */
-  /* background: #f9f9f9; */
-}
-        #media-sosial {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        #media-sosial a {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      text-align: center;
+      background-color: transparent;
+      padding: 20px 0;
+    }
 
+    #media-sosial {
+      display: inline-block;
+      position: relative;
+    }
+
+    #media-sosial a {
+      display: inline-block;
+      margin: 0 10px;
+      position: relative;
+      transition: transform 0.3s ease;
+    }
+
+    #media-sosial a:hover {
+      transform: scale(1.2);
+    }
     .watermark {
      position: absolute;
      bottom: 0;
