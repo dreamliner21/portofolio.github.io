@@ -18,6 +18,15 @@
       z-index: -1;
     }
 
+    #content {
+      position: relative;
+      z-index: 1;
+    }
+   .content {
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+   }
     footer {
       position: fixed;
       width: 100%;
@@ -44,6 +53,15 @@
       height: 24px;
     }
     
+    @keyframes masuk {
+      0% { opacity: 0; transform: translateX(-50px); }
+      100% { opacity: 1; transform: translateX(0); }
+    }
+    
+    .animasi-masuk {
+      animation: masuk 0.5s forwards;
+    }
+    
     .watermark {
      position: absolute;
      bottom: 0;
@@ -61,28 +79,43 @@
 </head>
 <body>
   <video id="video-background" autoplay loop>
-    <source src="https://d.top4top.io/m_2783c60va0.mp4" type="video/mp4">
+    <source src="https://j.top4top.io/m_2782fy5pq0.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
+  <div class="content">
+    <!-- Konten proyek 1 -->
+
+    <h1></h1>
+
+  </div>
    <!-- Tautan media sosial -->
   <footer>
     <div id="media-sosial">
       <a href="https://wa.me/6285965981742">
-        <img src="WhatsApp.png" alt="WhatsApp">
+        <img src="WhatsApp.png" alt="WhatsApp" class="animasi.masuk" style="animation-delay: 0.5s;">
       </a>
 
       <a href="https://www.github.com/dreamliner21">
-        <img src="github.png" alt="GitHub">
+        <img src="github.png" alt="GitHub" class="animasi.masuk" style="animation-delay: 1s;">
       </a>
 
       <a href="https://www.tiktok.com/@paul_2107_">
-        <img src="tiktok.png" alt="TikTok">
+        <img src="tiktok.png" alt="TikTok" class="animasi.masuk" style="animation-delay: 1.5s;">
       </a>
 
       <a href="https://www.instagram.com/initiaann_0705/">
-        <img src="instagram.png" alt="Instagram">
+        <img src="instagram.png" alt="Instagram" class="animasi.masuk" style="animation-delay: 2s;">
       </a>
     </div>
+    <script>
+    var ikonMediaSosial = document.querySelectorAll(".animasi-masuk");
+
+  window.onload = function() {
+    ikonMediaSosial.forEach(function(ikon, index) {
+      ikon.style.animationDelay = (index + 1) * 0.5 + "s";
+    });
+  }
+    </script>
     <div class="watermark">©PAULZZ</div>
   </footer>
 </body>
