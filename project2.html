@@ -50,18 +50,18 @@
   height: 30px;
 }
   </style>
-  <audio id="background-audio" loop autoplay src="sound.mp3"></audio>
   <script>
-        const backgroundAudio = document.getElementById("background-audio");
-
-        document.addEventListener("visibilitychange", function() {
-            if (document.hidden) {
-                backgroundAudio.pause();
-            } else {
-                backgroundAudio.play();
-            }
+        window.addEventListener('DOMContentLoaded', (event) => {
+            var audio1 = new Audio('jiwayangbersedih.mp3');
+            var audio2 = new Audio('sound.mp3');
+            
+            audio1.addEventListener('ended', function() {
+                audio2.play();
+            });
+            
+            audio1.play();
         });
-  </script>
+    </script>
 </head>
 <body>
   
