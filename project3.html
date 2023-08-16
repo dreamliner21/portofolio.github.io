@@ -1,1 +1,106 @@
 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>about me</title>
+  <style>
+  body {
+      margin: 0;
+      padding: 0;
+    }
+
+    #video-background {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    #content {
+      position: relative;
+      z-index: 1;
+    }
+   .content {
+      padding: 10px;
+      text-align: center;
+      color: #fff;
+   }
+    footer {
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      text-align: center;
+      background-color: transparent;
+      padding: 20px 0;
+    }
+    
+    #media-sosial {
+      display: inline-block;
+      position: relative;
+    }
+    
+    #media-sosial a {
+      display: inline-block;
+      margin: 0 10px;
+      position: relative;
+      opacity: 0; /* Mengatur opasitas menjadi 0 saat awalnya */
+    }
+    
+    #media-sosial a img {
+      width: 24px;
+      height: 24px;
+    }
+    
+    .watermark {
+     position: absolute;
+     bottom: 0;
+     left: 0;
+     width: 100%;
+     height: auto;
+     opacity: 1.5; /* Sesuaikan dengan keinginan Anda */
+     z-index: -1; /* Untuk memastikan teks berada di belakang konten footer */
+     font-size: 23px; /* Sesuaikan dengan ukuran teks yang diinginkan */
+     font-weight: bold; /* Pilihan: normal, bold, atau sesuaikan dengan preferensi Anda */
+     text-align: right ; /* Atur apakah teks akan berada di tengah, kiri, atau kanan */
+     color: rgba(0, 0, 0, 0.3); /* Sesuaikan dengan warna teks yang diinginkan */
+    }
+  </style>
+</head>
+<body>
+  <video id="video-background" autoplay loop>
+    <source src="https://j.top4top.io/m_2782fy5pq0.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="content">
+    <!-- Konten proyek 1 -->
+
+    <h1>about me</h1>
+    <p><b>Hai, saya Paul. Saya adalah siswa di SMA yang berada di Semarang. Saya memiliki hobi, hobi saya bermain <b>game</b>, <b>ngoding</b>, <b>olahraga</b> dan <b>rebahan</b>. <b>Saya berumur 18 tahun.</b></p>
+
+  </div>
+   <!-- Tautan media sosial -->
+  <footer>
+    <div id="media-sosial">
+      <a href="https://wa.me/6285965981742">
+        <img src="WhatsApp.png" alt="WhatsApp">
+      </a>
+
+      <a href="https://www.github.com/dreamliner21">
+        <img src="github.png" alt="GitHub">
+      </a>
+
+      <a href="https://www.tiktok.com/@paul_2107_">
+        <img src="tiktok.png" alt="TikTok">
+      </a>
+
+      <a href="https://www.instagram.com/initiaann_0705/">
+        <img src="instagram.png" alt="Instagram">
+      </a>
+    </div>
+    <div class="watermark">©PAULZZ</div>
+  </footer>
+</body>
+</html>
