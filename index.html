@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
     <title>Portofolio Saya</title>
@@ -25,6 +25,92 @@
         color: #000000; /* Misalnya, warna hitam untuk tema terang */
     }
   }
+
+        .slideshow-container {
+      position: relative;
+      max-width: 100%;
+      margin: auto;
+    }
+    
+    .slideshow-container .mySlides {
+      display: none;
+    }
+    
+    .slideshow-container .mySlides img {
+      width: 100%;
+      height: auto;
+    }
+    
+    .prev,
+    .next {
+      cursor: pointer;
+      position: absolute;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 0px 0px 0;
+      user-select: none;
+    }
+    
+    .next {
+      right: 0;
+      border-radius: 0px 0 0 0px;
+    }
+    
+    .prev:hover,
+    .next:hover {
+      background-color: transparent;
+    }
+    
+    .active {
+      background-color: #717171;
+    }
+    
+    /* Responsive */
+    @media only screen and (max-width: 300px) {
+      
+      .prev,
+      .next,
+      .text {
+        font-size: 11px;
+      }
+    }
+    
+    /* styles for the navigation menu */
+    ul.nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: transparent;
+    }
+    
+    ul.nav li {
+      float: left;
+    }
+    
+    ul.nav li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.nav li a:hover {
+      background-color: #111;
+    }
+
+    /* styles for the content sections */
+    .section {
+      padding: 50px;
+      text-align: center;
+    }
         
         h1 {
             text-align: center;
