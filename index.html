@@ -286,33 +286,41 @@
 </div>
 
     <script>
-    const darkImages = {
-      'project-img1': 'dark-image1.png',
-      'project-img2': 'dark-image2.png',
-      'project-img3': 'dark-image3.png',
-    };
+        var slideIndex = 1;
+    showSlides(slideIndex);
 
-    const lightImages = {
-      'project-img1': 'light-image1.png',
-      'project-img2': 'light-image2.png',
-      'project-img3': 'light-image3.png',
-    };
-
-    function setImagesBasedOnTheme() {
-      const isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-      const imageElements = document.getElementsByClassName('project');
-      for (const image of imageElements) {
-        const imageId = image.id;
-        if (isDarkMode) {
-          image.src = darkImages[imageId];
-        } else {
-          image.src = lightImages[imageId];
-        }
-      }
+    function changeSlide(n) {
+      showSlides(slideIndex += n);
     }
 
-    setImagesBasedOnTheme();
-  </script>
-  </body>
-    </html>
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) {
+        slideIndex = 1;
+      }
+      
+      if (n < 1) {
+        slideIndex = slides.length;
+      }
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+    </script>
+</body>
+</html>
