@@ -26,10 +26,9 @@
     }
   }
 
-        .slideshow-container {
-      width: 800px; /* Ubah ukuran lebar sesuai kebutuhan */
-      height: 400px; /* Ubah ukuran tinggi sesuai kebutuhan */
-      margin: 0 auto; /* Mengatur slideshow agar berada di tengah halaman */
+     .slideshow-container {
+       /* kode untuk mengatur ukuran slideshow */
+     position: relative; /* menambahkan posisi relatif pada slideshow container */
     }
     
     .slideshow-container .mySlides {
@@ -43,31 +42,31 @@
     
     .prev,
     .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: 30px; /* Ubah ukuran lebar sesuai kebutuhan */
-      height: 30px; /* Ubah ukuran tinggi sesuai kebutuhan */
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%); /* mengatur posisi tombol vertikal di tengah */
+    width: auto; /* merubah lebar tombol menjadi auto */
+    height: auto; /* merubah tinggi tombol menjadi auto */
     /* kode lainnya yang mungkin diperlukan */
-      margin-top: -22px;
-      padding: 16px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 0px 0px 0;
-      user-select: none;
-    }
-    
-    .next {
-      right: 0;
-      border-radius: 0px 0 0 0px;
-    }
-    
-    .prev:hover,
-    .next:hover {
-      background-color: transparent;
-    }
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 0px 0px 0;
+    user-select: none;
+  }
+
+   .next {
+    right: 0;
+    border-radius: 0px 0 0 0px;
+  }
+
+   .prev:hover,
+   .next:hover {
+    background-color: transparent;
+  }
     
     .active {
       background-color: #717171;
