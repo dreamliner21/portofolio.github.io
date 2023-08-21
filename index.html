@@ -27,37 +27,27 @@
     }
   }
 
-        /* styles for the navigation menu */
-    ul.nav {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      position: relative;
-      overflow: hidden;
-      background-color: transparent;
-      z-index: 100;
+        nav {
+      background-color: #333;
+      padding: 10px;
     }
-    
-    ul.nav li {
-      float: left;
-    }
-    
-    ul.nav li a {
-      display: block;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
+  
+    .nav-link {
+      color: #fff;
       text-decoration: none;
+      padding: 5px 10px;
+      margin-right: 10px;
+    }
+  
+    .nav-link:hover {
+      background-color: #fff;
+      color: #333;
     }
     
-    ul.nav li a:hover {
-      background-color: #111;
-    }
-        
      .slideshow-container {
        /* kode untuk mengatur ukuran slideshow */
      position: relative; /* menambahkan posisi relatif pada slideshow container */
-     z-index: 1;
+     z-index: 1
     }
     
     .slideshow-container .mySlides {
@@ -171,27 +161,41 @@
   height: 30px;
 }
   </style>
-    <audio id="background-audio" loop autoplay src=jiwayangbersedih.mp3"></audio>
+    
   <script>
-        const backgroundAudio = document.getElementById("background-audio");
-
-        document.addEventListener("visibilitychange", function() {
-            if (document.hidden) {
-                backgroundAudio.pause();
-            } else {
-                backgroundAudio.play();
-            }
+        document.addEventListener("DOMContentLoaded", function() {
+      var links = document.querySelectorAll(".nav-link");
+      for (var i = 0; i < links.length; i++) {
+        links[i].addEventListener("click", function(event) {
+          event.preventDefault(); // menghentikan navigasi ke URL asli
+          
+          // logic when a link is clicked
+          var linkText = this.textContent;
+          console.log("Link clicked: " + linkText);
+  
+          // contoh pindah halaman berdasarkan link yang diklik
+          if (linkText === "Home") {
+            window.location.href = "home.html";
+          } else if (linkText === "About") {
+            window.location.href = "about.html";
+          } else if (linkText === "Services") {
+            window.location.href = "services.html";
+          } else if (linkText === "Contact") {
+            window.location.href = "contact.html";
+          }
         });
+      }
+    });
   </script>  
 </head>
 <body>
+    <nav>
+    <a href="#" class="nav-link">Home</a>
+    <a href="#" class="nav-link">About</a>
+    <a href="#" class="nav-link">Services</a>
+    <a href="#" class="nav-link">Contact</a>
+    </nav>
     
-    <!-- navigation menu -->
-  <ul class="nav">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="project1.html">About</a></li>
-    <li><a href="project3.html">Contact</a></li>
-  </ul>
   <div class="slideshow-container">
     <div class="mySlides">
       <img src="image-1.png" onclick="window.location.href='https://f.top4top.io/p_2788ydkur0.png'">
