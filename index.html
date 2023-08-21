@@ -27,9 +27,37 @@
     }
   }
 
+        /* styles for the navigation menu */
+    ul.nav {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+      background-color: transparent;
+      z-index: 100;
+    }
+    
+    ul.nav li {
+      float: left;
+    }
+    
+    ul.nav li a {
+      display: block;
+      color: black;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    ul.nav li a:hover {
+      background-color: #111;
+    }
+        
      .slideshow-container {
        /* kode untuk mengatur ukuran slideshow */
      position: relative; /* menambahkan posisi relatif pada slideshow container */
+     z-index: 1;
     }
     
     .slideshow-container .mySlides {
@@ -81,31 +109,6 @@
       .text {
         font-size: 11px;
       }
-    }
-    
-    /* styles for the navigation menu */
-    ul.nav {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      overflow: hidden;
-      background-color: transparent;
-    }
-    
-    ul.nav li {
-      float: left;
-    }
-    
-    ul.nav li a {
-      display: block;
-      color: black;
-      text-align: center;
-      padding: 14px 16px;
-      text-decoration: none;
-    }
-    
-    ul.nav li a:hover {
-      background-color: #111;
     }
 
     /* styles for the content sections */
