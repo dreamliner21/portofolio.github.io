@@ -28,9 +28,10 @@
   }
 
         .logo {
-        width: 50px; /* ukuran sesuai kebutuhan Anda */
+         width: 50px; /* ukuran sesuai kebutuhan Anda */
          height: 50px; /* ukuran sesuai kebutuhan Anda */
          object-fit: contain;
+         filter: invert( var(--theme-color) );
         }
 
         nav {
@@ -195,7 +196,12 @@
         });
       }
     });
-  </script>  
+  </script>
+  <script>
+    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+    document.documentElement.style.setProperty('--theme-color', prefersDarkMode ? '1' : '0');
+</script>
 </head>
 <body>
     <img src="logo-light.png" alt="" class="logo">
