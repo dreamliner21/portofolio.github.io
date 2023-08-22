@@ -193,15 +193,13 @@
           } else if (linkText === "Contact") {
             window.location.href = "contact.html";
           }
+            const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+            document.documentElement.style.setProperty('--theme-color', prefersDarkMode ? '1' : '0');
         });
       }
     });
   </script>
-  <script>
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-    document.documentElement.style.setProperty('--theme-color', prefersDarkMode ? '1' : '0');
-</script>
 </head>
 <body>
     <img src="logo-light.png" alt="" class="logo">
