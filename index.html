@@ -90,34 +90,16 @@
    /* Menambahkan animasi slideshow */
 @keyframes slideshow {
   0% {
-    opacity: 1;
+    transform: translateX(0);
   }
-  25% {
-    opacity: 0;
-  }
-  26% {
-    opacity: 1;
-  }
-  50% {
-    opacity: 0;
-  }
-  51% {
-    opacity: 1;
-  }
-  75% {
-    opacity: 0;
-  }
-  76% {
-    opacity: 1;
-  }
-  99% {
-    opacity: 0;
+  100% {
+    transform: translateX(-100%);
   }
 }
 
-.animate-slideshow {
-  animation: slideshow 12s infinite; /* Mengatur waktu interval slideshow */
-}
+  .animate-slideshow {
+  animation: slideshow 6s infinite; /* Mengatur waktu interval slideshow dan durasi animasi menjadi 6 detik */
+  }
 
     /* styles for the content sections */
     .section {
@@ -332,7 +314,7 @@ function showSlides() {
   }
   slides[slideIndex - 1].style.display = "block";
   setTimeout(showSlides, 6000); // Melakukan animasi slide setiap 6 detik
-
+    
   // Menambahkan animasi dengan mengganti kelas CSS
   slides[slideIndex - 1].classList.add("animate-slideshow");
   setTimeout(function () {
