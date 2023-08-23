@@ -115,7 +115,7 @@
   }
 }
 
-.slideshow-container .mySlides {
+.animate-slideshow {
   animation: slideshow 12s infinite; /* Mengatur waktu interval slideshow */
 }
 
@@ -318,7 +318,7 @@
 
     <script>
         var slideIndex = 0;
-        showSlides();
+showSlides();
 
 function showSlides() {
   var i;
@@ -331,8 +331,14 @@ function showSlides() {
     slideIndex = 1;
   }
   slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 12000); // Melakukan animasi slide setiap 3 detik
-        }
+  setTimeout(showSlides, 6000); // Melakukan animasi slide setiap 6 detik
+
+  // Menambahkan animasi dengan mengganti kelas CSS
+  slides[slideIndex - 1].classList.add("animate-slideshow");
+  setTimeout(function () {
+    slides[slideIndex - 1].classList.remove("animate-slideshow");
+  }, 11000); // Menghapus animasi setelah 11 detik (durasi animasi 12 detik)
+}
     </script>
 </body>
 </html>
