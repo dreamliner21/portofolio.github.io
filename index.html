@@ -87,29 +87,37 @@
     user-select: none;
   }
 
-   .next {
-    right: 0;
-    border-radius: 0px 0 0 0px;
+   /* Menambahkan animasi slideshow */
+@keyframes slideshow {
+  0% {
+    opacity: 1;
   }
+  25% {
+    opacity: 0;
+  }
+  26% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  51% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 0;
+  }
+  76% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+}
 
-   .prev:hover,
-   .next:hover {
-    background-color: transparent;
-  }
-    
-    .active {
-      background-color: #717171;
-    }
-    
-    /* Responsive */
-    @media only screen and (max-width: 300px) {
-      
-      .prev,
-      .next,
-      .text {
-        font-size: 11px;
-      }
-    }
+.slideshow-container .mySlides {
+  animation: slideshow 12s infinite; /* Mengatur waktu interval slideshow */
+}
 
     /* styles for the content sections */
     .section {
